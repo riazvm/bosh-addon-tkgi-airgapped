@@ -1,0 +1,7 @@
+set -e -x
+
+cp -v *.deb ${BOSH_INSTALL_TARGET}/
+
+export DEBIAN_FRONTEND=noninteractive
+dpkg -r dracut
+dpkg -i ${BOSH_INSTALL_TARGET}/*.deb

@@ -1,0 +1,20 @@
+et -x
+  
+kubectl="/var/vcap/packages/kubernetes/bin/kubectl --kubeconfig=/var/vcap/jobs/kubelet/config/kubeconfig"
+  
+until ${kubectl} get nodes -o wide -L bosh.id | grep -e ' Ready' | grep "<%= spec.id %>$"; do
+    sleep 2
+done
+  
+#sudo apt-get install ethtool
+
+#!/bin/bash -e
+
+export DEBIAN_FRONTEND=noninteractive
+sudo dpkg -i ethtool_5.4-1_amd64.deb || true
+sudo apt-get install ethtool || true
+sudo ethtool -G eth0 rx 400 || true
+sudo ethtool -G eth0 tx 400 || true
+
+exit 0
+
