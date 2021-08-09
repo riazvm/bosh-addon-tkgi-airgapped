@@ -1,0 +1,11 @@
+---
+name: ethtool
+
+templates: 
+  pre-start.erb: bin/pre-start
+  post-start.erb: bin/post-start
+
+packages: []
+
+properties: {}
+
