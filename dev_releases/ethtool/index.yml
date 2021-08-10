@@ -1,4 +1,6 @@
 builds:
+  1267d4fd-0b12-431e-67a2-ab680be8469c:
+    version: 0+dev.2
   302786f4-1dae-4295-7228-04d0d1ed7bf2:
     version: 0+dev.1
 format-version: "2"
