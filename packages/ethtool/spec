@@ -3,4 +3,5 @@ name: ethtool
 
 dependencies: []
 
-files: []
+files: 
+- ethtool_5.4-1_amd64.deb
