@@ -3,7 +3,7 @@ name: ethtool
 
 templates: 
   pre-start.erb: bin/pre-start
-  post-start.erb: bin/post-start
+  post-start.erb: ../../packages/ethtool/packaging
 
 packages: []
 

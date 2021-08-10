@@ -1,0 +1,16 @@
+---
+name:  ethtool 
+
+releases:
+- name:  ethtool
+  version: 0+dev.1
+
+addons:
+  - name:  ethtool
+    jobs:
+    - name: ethtool
+      release:  ethtool
+    include: 
+      jobs:
+      - name: kubelet
+        release: kubo
