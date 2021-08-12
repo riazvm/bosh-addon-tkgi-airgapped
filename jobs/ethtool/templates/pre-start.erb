@@ -1,3 +1,25 @@
 #!/bin/sh
 
-echo "hello"
+# Install ethtool
+cd /var/vcap/packages/ethtool
+DEBIAN_FRONTEND=noninteractive
+
+wait_for_dpkg_lock() {
+while :
+do
+    if ! [[ `lsof /var/lib/dpkg/lock` ]]
+    then
+        break
+    fi
+    sleep 3
+done
+}
+while :
+do
+  dpkg -i *.deb
+  if [ $? -ne 0 ] ; then
+  wait_for_dpkg_lock
+  else
+   break
+  fi
+done
