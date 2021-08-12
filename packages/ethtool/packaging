@@ -1,8 +1,6 @@
 set -e -x
 
-sudo cp -v ../../blob/ethtool_5.4-1_amd64.deb ${BOSH_INSTALL_TARGET}/
-sudo sudo chmod -R 777 ${BOSH_INSTALL_TARGET}/*.deb
-chown root:${BOSH_INSTALL_TARGET}/ethtool_5.4-1_amd64.deb
-sudo export DEBIAN_FRONTEND=noninteractive
-sudo dpkg -r dracut
-sudo dpkg -i ${BOSH_INSTALL_TARGET}/*.deb
+cp -v *.deb ${BOSH_INSTALL_TARGET}/
+
+export DEBIAN_FRONTEND=noninteractive
+dpkg -i ${BOSH_INSTALL_TARGET}/*.deb

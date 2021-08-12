@@ -3,9 +3,17 @@ name: ethtool
 
 templates: 
   pre-start.erb: bin/pre-start
-  post-start.erb: ../../packages/ethtool/packaging
+  post-start.erb: bin/post-start
 
-packages: []
+packages: 
+ - ethtool
 
-properties: {}
+properties: 
+  rx:
+    description: Rx ring buffer value 
+    default: 400
+  tx:
+    description: Tx ring buffer value 
+    default: 400
+
 
