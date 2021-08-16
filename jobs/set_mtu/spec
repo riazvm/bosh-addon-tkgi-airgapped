@@ -1,0 +1,14 @@
+---
+name: set_mtu
+
+templates:
+  pre-start.sh.erb: bin/pre-start
+
+properties:
+  networking.set_mtu.interface:
+    description: Network interface name.
+    default: eth0
+
+  networking.set_mtu.mtu:
+    description: MTU (Maximum Transmission Unit) value in bytes
+    default: 1500
