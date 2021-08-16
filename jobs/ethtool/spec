@@ -11,9 +11,9 @@ packages:
 properties: 
   rx:
     description: Rx ring buffer value 
-    default: 400
+    default: 1280
   tx:
     description: Tx ring buffer value 
-    default: 400
+    default: 1280
 
 
