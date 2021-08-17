@@ -3,6 +3,7 @@
 ## What does this do?
 
 Allows you to set ethtool properties such as Ring buffer values.  Defaults to bumping Rx/Tx to 400.
+Allows to change the MTU size on the eth0 interface
 
 ## How do I install it?
 
@@ -22,6 +23,7 @@ cd bosh-addon-tkgi-airgapped
 ```
 
 4. Change the values of defaqult Tx and Rx in the spec file in the /jobs/ethtool folder
+   Change the values of the MTU size in the spec file under /jobs/set_mtu
 
 ```
 
@@ -29,6 +31,8 @@ bosh create-release --force
 bosh upload-release ./dev_releases/ethtool/ethtool-0+dev.1.yml
 
 ```
+
+
 
 5. Configure the addon from this repo
 ```
