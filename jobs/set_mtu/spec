@@ -11,4 +11,4 @@ properties:
 
   networking.set_mtu.mtu:
     description: MTU (Maximum Transmission Unit) value in bytes
-    default: 1500
+    default: 8900

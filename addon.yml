@@ -3,13 +3,15 @@ name:  ethtool
 
 releases:
 - name:  ethtool
-  version: 0+dev.3
+  version: 0+dev.4
 
 addons:
   - name:  ethtool
     jobs:
     - name: ethtool
       release:  ethtool
+    - name: set_mtu
+      release: ethtool
     include: 
       jobs:
       - name: kubelet
