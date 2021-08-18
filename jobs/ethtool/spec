@@ -18,7 +18,7 @@ properties:
   rx-mini:
     description: Rx ring buffer value 
     default: 512
-  tx:
+  rx-jumbo:
     description: Tx ring buffer value 
     default: 1024
 
