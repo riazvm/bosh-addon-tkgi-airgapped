@@ -4,5 +4,7 @@ set -x
   
 ethtool -G eth0 rx <%= p("rx") %>
 ethtool -G eth0 tx <%= p("tx") %>
+ethtool -G eth0 rx-mini <%= p("rx-mini") %>
+ethtool -G eth0 rx-jumbo <%= p("rx-jumbo") %>
 
 

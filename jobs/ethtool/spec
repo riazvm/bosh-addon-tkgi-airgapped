@@ -11,9 +11,14 @@ packages:
 properties: 
   rx:
     description: Rx ring buffer value 
-    default: 4000
+    default: 4092
   tx:
     description: Tx ring buffer value 
-    default: 4000
-
+    default: 4092
+  rx-mini:
+    description: Rx ring buffer value 
+    default: 512
+  tx:
+    description: Tx ring buffer value 
+    default: 1024
 
