@@ -1,0 +1,8 @@
+---
+name:  ethtool
+
+releases:
+- name:  ethtool
+  version: 0+dev.1
+
+addons: []
