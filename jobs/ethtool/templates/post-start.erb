@@ -1,10 +1,10 @@
-#!/bin/sh
+#!/bin/bash
 
 set -x
   
-ethtool -G eth0 rx <%= p("rx") %>
-ethtool -G eth0 tx <%= p("tx") %>
-ethtool -G eth0 rx-mini <%= p("rx-mini") %>
-ethtool -G eth0 rx-jumbo <%= p("rx-jumbo") %>
+ethtool -G eth0 rx <%= p("rx") %> || true
+ethtool -G eth0 tx <%= p("tx") %> || true
+ethtool -G eth0 rx-mini <%= p("rx-mini") %> || true
+ethtool -G eth0 rx-jumbo <%= p("rx-jumbo") %> || true
 
 
