@@ -40,7 +40,7 @@ bosh -n update-config --name=ethtool --type=runtime ./addon.yml
 ```
 6. Update your BOSH VMs with a redeploy, e.g. bosh deploy CLI ; TAS for VMs via Ops Manager ; TKGI clusters via the TKGI CLI "upgrade/update-cluster" and/or Ops Manager "Apply Pending Changes" button with the TKGI upgrade errand enabled.  This addon will automatically be installed on all nodes with the default manifest `addon.yml`
 
-## Update or new release of the addon?
+## Update a new release of the addon?
 
 7. To edit script and release a new version , update the script as per use case
 
@@ -75,3 +75,10 @@ bosh -n update-config --name=tkgi-update-ringbuffer --type=runtime ./addon.yml
 
 13. To verify ssh into the worker nodes and see if the script has been done.
 
+## Troubleshooting
+
+14. When creating a release if the following error occurs 
+
+    ![](./media/deverror.png)
+
+    Delete the .dev folder and try again
